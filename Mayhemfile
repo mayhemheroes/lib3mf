@@ -9,7 +9,7 @@ project: baptistapedro/lib3mf-fuzz
 target: lib3mf-fuzz-3
 
 # Base image to run the binary in.
-image: index.docker.io/pedbap/lib3mf-fuzz@sha256:d7ddd204e2c7ccba77cec13a757648b22a46e7ad6924b887cce6a0e9749c6c31
+image: pedbap/lib3mf-fuzz:3
 
 # Turns on extra test case processing (completing a run will take longer)
 advanced_triage: false
@@ -40,6 +40,3 @@ cmds:
     ## that length will be truncated. Be very careful about increasing this
     ## limit as it can severely affect your fuzzer performance.
     # max_length: 8192
-
-testsuite:
-  - https://mayhem.forallsecure.com/baptistapedro/lib3mf-fuzz/lib3mf-fuzz-3/testsuite.tar
