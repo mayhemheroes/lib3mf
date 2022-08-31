@@ -8,7 +8,7 @@ RUN git submodule update
 RUN cmake -DCMAKE_C_COMPILER=afl-clang -DCMAKE_CXX_COMPILER=afl-clang++ .
 RUN make
 RUN make install
-COPY file:0f3e47d071cf53fa3a4172dc865ded157e33203325bdbf121383109a3232cde6 in . 
+COPY file:0f3e47d071cf53fa3a4172dc865ded157e33203325bdbf121383109a3232cde6  . 
 RUN afl-clang++ -I/usr/local/include/Bindings/CppDynamic fuzz.cpp -o /fuzz_3mf -l3mf -lstdc++ -ldl
 RUN mkdir /3mfCorpus
 RUN wget https://github.com/3MFConsortium/3mf-samples/raw/master/examples/core/cube_gears.3mf
