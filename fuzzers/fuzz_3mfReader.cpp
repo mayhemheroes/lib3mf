@@ -23,7 +23,7 @@ void ExtractInfoExample(std::string sFileName) {
 int main(int argc, char** argv) {
 	if (argc != 2) {
 		std::cout << "Usage: " << std::endl;
-		std::cout << "ExtractInfo model.3mf" << std::endl;
+		std::cout << "fuzz model.3mf" << std::endl;
 		return 0;
 	}
 	
